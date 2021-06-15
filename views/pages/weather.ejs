@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera plantilla</title>
+    <link rel="stylesheet" href="../../stylesheet/weather.css">
+
+</head>
+
+
+<body>
+    <div class="wrapper__container">
+
+
+
+        <div>
+            <%-name%>
+        </div>
+
+
+        <div>
+            General <%-weather[0].description%>
+                <img class="img-fluid" src="https://openweathermap.org/img/wn/<%-weather[0].icon%>@2x.png" />
+
+        </div>
+        <div>
+            Temperatura
+            <%-main.temp%>
+
+        </div>
+
+
+        <div>
+            Humedad
+
+            <%-main.humidity%>%
+
+        </div>
+        <div>
+            Temp.Max
+            <%-main.temp_max%>
+        </div>
+        <div>
+            Temp.Min
+
+            <%-main.temp_min%>
+        </div>
+    </div>
+
+
+    <!-- <h1> El tiempo en <%-name%> es: <%-weather[0].description%> <img
+                                src="https://openweathermap.org/img/wn/<%-weather[0].icon%>@2x.png" />
+                </h1>
+                <h2>La temperatura en <%-name%> es de: <%-main.temp%> grados
+                </h2>
+                <h2>La temperatura mínima: <%-main.temp_min%> grados
+                </h2>
+                <h2>La temperatura máxima: <%-main.temp_max%> grados
+                </h2>
+                <h2>La humedad es del <%-main.humidity%> %
+                </h2> -->
+
+</body>
+
+</html>

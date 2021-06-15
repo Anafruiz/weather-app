@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+
 const https = require("https");
 const bodyparser = require("body-parser");
 const { parse } = require("path");
@@ -15,7 +16,10 @@ const url =
 
 //SET TEMPLATE
 app.set("view engine", "ejs");
-app.listen(3000, function () {
+const staticServerPath = "./";
+app.use(express.static(staticServerPath));
+const serverPort = process.env.PORT || 3000;
+app.listen(serverPort, function () {
   console.log("the server has started at port 3000");
 });
 app.get("/", function (request, response) {

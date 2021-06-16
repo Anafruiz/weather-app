@@ -4,9 +4,15 @@ const https = require("https");
 const bodyparser = require("body-parser");
 const { parse } = require("path");
 app.use(bodyparser.urlencoded({ extended: true }));
+var sass = require("node-sass-middleware");
 
-app.use("/stylesheet", express.static(__dirname + "/stylesheet"));
-
+app.use(
+  sass({
+    src: __dirname + "/sass", // Input SASS files
+    dest: __dirname + "/public", // Output CSS
+    debug: true,
+  })
+);
 const apikey = "7108838b20074b030ab798854f3c4e0d";
 const url =
   "https://api.openweathermap.org/data/2.5/weather?q=dublin&appid=" +

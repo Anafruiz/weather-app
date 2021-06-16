@@ -24,7 +24,7 @@ app.listen(serverPort, function () {
 app.get("/", function (request, response) {
   response.sendFile(__dirname + "/index.html");
 });
-app.post("/", function (req, response) {
+app.post("/weather", function (req, response) {
   const apikey = "7108838b20074b030ab798854f3c4e0d";
   let cityName = req.body.cityname;
   const url =

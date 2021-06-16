@@ -6,39 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+        integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Kiwi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../stylesheet/index.css">
 
 </head>
 
 <body>
     <div class="wrapper__container">
+
         <h1 class="title">El tiempo</h1>
-        <form action="/weather" method="POST">
-            <label class="label" for="cityname">Ciudad:</label>
-            <input class="input" type="text" name="cityname" value="" />
-            <button class="button" type="submit" name="button"> Enviar</button>
+        <form class="form" action="/weather" method="POST">
+            <input class="input" type="text" name="cityname" value="" placeholder="El tiempo en..." />
+            <button class="button" type="submit" name="button"> <i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
+
     </div>
 
 
     <div class="container">
 
-        <div class="rain">
-            <div class="drop"></div>
-            <div class="waves">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="splash"></div>
-            <div class="particles">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
+
+
 
         <div class="rain">
             <div class="drop"></div>
@@ -54,7 +46,6 @@
                 <div></div>
             </div>
         </div>
-
         <div class="rain">
             <div class="drop"></div>
             <div class="waves">
@@ -69,67 +60,6 @@
                 <div></div>
             </div>
         </div>
-
-        <div class="rain">
-            <div class="drop"></div>
-            <div class="waves">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="splash"></div>
-            <div class="particles">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
-        <div class="rain">
-            <div class="drop"></div>
-            <div class="waves">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="splash"></div>
-            <div class="particles">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
-        <div class="rain">
-            <div class="drop"></div>
-            <div class="waves">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="splash"></div>
-            <div class="particles">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
-        <div class="rain">
-            <div class="drop"></div>
-            <div class="waves">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="splash"></div>
-            <div class="particles">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
         <div class="rain">
             <div class="drop"></div>
             <div class="waves">

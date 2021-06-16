@@ -5,8 +5,8 @@
 }
 body {
   height: 100vh;
-  background-color: rgb(34, 165, 241);
-  /* background: url("../images/sky.jpg"); */
+  /* background-color: rgb(34, 165, 241); */
+  background: url("../images/sky.jpg");
 }
 .wrapper__container {
   display: flex;

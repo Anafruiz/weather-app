@@ -6,20 +6,23 @@
 body {
   /* background-color: rgb(34, 165, 241); */
   background-image: url("../images/sky.jpg");
-}
-.wrapper__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  font-family: 'Bree Serif', serif;
 
-.title {
-  font-family: "Ribeye Marrow";
-  margin-top: 100px;
-  font-size: 50px;
-  text-align: center;
-  color: white;
+}
+  .wrapper__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family: 'Ribeye', cursive;
+  }
 }
 @media (min-width: 768px) {
   .title {
@@ -51,7 +54,7 @@ h1:after {
 .button {
   margin: 10px;
   padding: 7px;
-  font-family: "Kiwi Maru", serif;
+
   background: white;
   color: inherit;
   cursor: pointer;
@@ -80,6 +83,8 @@ h1:after {
 }
 
 .input {
+  font-family: 'Bree Serif', serif;
+
   text-align: center;
   padding: 3px;
   height: 40px;

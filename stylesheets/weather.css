@@ -1,3 +1,92 @@
 body {
-  background-color: red;
+  background-image: url("../images/sky.jpg");
+  font-family: "Bree Serif", serif;
+}
+
+.wrapper__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px;
+  background-color: rgb(241, 241, 134);
+  /* margin-top: 200px; */
+  border: 3px solid black;
+}
+.name {
+  font-size: 22px;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .name {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .name {
+    font-size: 50px;
+  }
+}
+.temp {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .temp {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .temp {
+    font-size: 30px;
+  }
+}
+.row {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .row {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .row {
+    font-size: 22px;
+  }
+}
+.column {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.humity {
+  margin: 15px;
+}
+.description {
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .description {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .description {
+    font-size: 22px;
+  }
+}
+.img {
+  width: 120px;
+  height: 120px;
 }

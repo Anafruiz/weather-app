@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera plantilla</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+        integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Ribeye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../stylesheets/weather.css">
 
 </head>
@@ -13,40 +17,42 @@
 
 <body>
     <div class="wrapper__container">
+        <div class="border">
+            <div class="name">
+                <%-name%>
+            </div>
+            <div class="description">
+                General <%-weather[0].description%>
 
 
+            </div>
+            <img class="img" src="https://openweathermap.org/img/wn/<%-weather[0].icon%>@2x.png" />
 
-        <div>
-            <%-name%>
-        </div>
+            <div class="temp">
+                Temperatura
+                <%-main.temp%> °C
 
+            </div>
 
-        <div>
-            General <%-weather[0].description%>
-                <img class="img-fluid" src="https://openweathermap.org/img/wn/<%-weather[0].icon%>@2x.png" />
+            <div class="row">
+                <div class="humity">
+                    Humedad
 
-        </div>
-        <div>
-            Temperatura
-            <%-main.temp%>
+                    <%-main.humidity%>%
 
-        </div>
+                </div>
+                <div class="column">
+                    <div>
+                        Temp.Max
+                        <%-main.temp_max%> °C
+                    </div>
+                    <div>
+                        Temp.Min
 
-
-        <div>
-            Humedad
-
-            <%-main.humidity%>%
-
-        </div>
-        <div>
-            Temp.Max
-            <%-main.temp_max%>
-        </div>
-        <div>
-            Temp.Min
-
-            <%-main.temp_min%>
+                        <%-main.temp_min%> °C
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

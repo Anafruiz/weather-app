@@ -53,7 +53,9 @@ app.post("/weather", function (req, response) {
         // response.writeHead(200, { "Content-Type": "text/html;charset=UTF-8" });
         response.render("pages/weather", weatherinfo);
       } else {
-        response.write("<h1>" + "Esta ciudad no existe " + "</h1>");
+        response.render("pages/nocity");
+
+        // response.write("<h1>" + "Esta ciudad no existe " + "</h1>");
       }
     });
   });

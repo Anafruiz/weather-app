@@ -1,9 +1,10 @@
-* {
+html {height: 100vh;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 body {
+
   /* background-color: rgb(34, 165, 241); */
   background-image: url("../images/sky.jpg");
   font-family: 'Bree Serif', serif;
@@ -84,7 +85,6 @@ h1:after {
 
 .input {
   font-family: 'Bree Serif', serif;
-
   text-align: center;
   padding: 3px;
   height: 40px;
@@ -107,12 +107,17 @@ h1:after {
   }
 }
 .container {
-  min-height: 40vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
-
+@media (min-width: 768px) {
+  .container {
+    min-height: 25vh;
+  }
+}
+   
 .rain {
   position: relative;
 }
@@ -387,3 +392,22 @@ h1:after {
     transform: translate(50px, 0px) scale(0.1);
   }
 }
+footer{
+  margin:0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    footer {
+      flex-direction: row;
+      margin:0px 20px;
+
+    }
+  }
+  .contact{
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  }

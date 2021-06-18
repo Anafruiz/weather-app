@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../stylesheets/weather.css">
 
 </head>
+
 
 
 <body>
@@ -52,22 +53,13 @@
                     </div>
                 </div>
             </div>
+            <button class="button" type="submit" name="button"> <i class="fa fa-home" aria-hidden="true"><a class="back"
+                        href="./"></i>Volver</a></button>
         </div>
     </div>
 
 
-    <!-- <h1> El tiempo en <%-name%> es: <%-weather[0].description%> <img
-                                src="https://openweathermap.org/img/wn/<%-weather[0].icon%>@2x.png" />
-                </h1>
-                <h2>La temperatura en <%-name%> es de: <%-main.temp%> grados
-                </h2>
-                <h2>La temperatura mínima: <%-main.temp_min%> grados
-                </h2>
-                <h2>La temperatura máxima: <%-main.temp_max%> grados
-                </h2>
-                <h2>La humedad es del <%-main.humidity%> %
-                </h2> -->
-
+    <%- include("./footer"); %>
 </body>
 
 </html>

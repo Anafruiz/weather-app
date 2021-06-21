@@ -4,7 +4,7 @@ const https = require("https");
 const bodyparser = require("body-parser");
 const { path } = require("path");
 app.use(bodyparser.urlencoded({ extended: true }));
-
+const Database = require("better-sqlite3");
 app.use("/stylesheets", express.static(__dirname + "/stylesheets"));
 const apikey = "7108838b20074b030ab798854f3c4e0d";
 const url =
@@ -12,6 +12,10 @@ const url =
   apikey +
   "&units=metric";
 
+//DATABASE
+const db = new Database("./database.db", {
+  verbose: console.log,
+});
 //SET TEMPLATE
 app.set("view engine", "ejs");
 const staticServerPath = "./";
@@ -24,6 +28,22 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + "/index.html");
 });
 app.post("/weather", function (req, response) {
+  //get current date
+  const date = new Date().toISOString();
+  //add city to database
+  const query = db.prepare("INSERT INTO cities(searchedAt,city) VALUES(?,?)");
+  //RUN QUERY
+  console.log(req.body);
+  const queryResult = query.run(
+    //add date
+    date,
+    //add city
+    req.body.cityname
+  );
+  //  response.json({
+  //   result: "City created",
+  //   userId: queryResult.lastInsertRowid,
+  //  });
   const apikey = "7108838b20074b030ab798854f3c4e0d";
   let cityName = req.body.cityname;
   const url =
